@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h1>AI Image Generator</h1>
+            </div>
+            <button class="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+
+        <div class="main-content">
+            <form action="#" class="prompt-form">
+                <!-- Prompt Container -->
+                <div class="prompt-container">
+                    <textarea class="prompt-input" placeholder="Describe your imagination in detail" required autofocus></textarea>
+                    <button type="button" class="prompt-btn">
+                        <i class="fa-solid fa-dice"></i>
+                    </button>
+                </div>
+                <!-- Prompt Actions Button -->
+                <div class="prompt-actions">
+                    <div class="select-wrapper">
+                        <select class="custom-select" id="model-select" required>
+                            <option value="" select disabled>Select Model</option>
+                            <option value="stabilityai/stable-diffusion-xl-base-1.0">StabilityAI l</option>
+                            <option value="stabilityai/stable-diffusion-xl-base-1.0">StabilityAI 2</option>
+
+                            <!-- <option value="nitrosocke/redshift-diffusion">11</option>
+                            <option value="danbrown/darkstorm2150-protogen-v2-2">stable-diffusion-v1-5</option>
+                            <option value="playgroundai/playground-v2-1024px-aesthetic">OpenJourney</option> -->
+                        </select>
+                    </div>
+                    
+                    <div class="select-wrapper">
+                        <select class="custom-select" id="count-select" required>
+                            <option value="" select disabled>Select Model</option>
+                            <option value="1">1 Image</option>
+                            <option value="2">2 Images</option>
+                            <option value="3">3 Images</option>
+                            <option value="4">4 Images</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select class="custom-select" id="ratio-select" required>
+                            <option value="" select disabled>Aspect Ratio</option>
+                            <option value="1/1">Square (1/1)</option>
+                            <option value="16/9">Landscape (16:9)</option>
+                            <option value="9/16">Portrait (9/16)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="generate-btn">
+                        <i class="fa-solid fa-wand-sparkles"></i>
+                        Generate
+                    </button>
+                </div>
+                <!-- Result Gallery Grid -->
+                 <div class="gallery-grid">
+                </div> 
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
